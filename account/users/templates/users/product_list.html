@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: beige;
+            font-family: 'Arial', sans-serif;
+            color: #d6d3d3;
+            position: relative;
+            overflow: auto;
+        }
+
+        header {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0;
+            z-index: 2;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 380px;
+            margin-bottom: 0;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            margin-left: 300px;
+        }
+
+        .links h4 {
+            margin: 0;
+            cursor: pointer;
+            color: #0b0b0b;
+        }
+
+        .links h4 a {
+            text-decoration: none !important;
+            color: black !important;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-family: 'Itim', cursive;
+            color: #0d0c0c;
+        }
+
+        .wrapcontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            padding: 0;
+        }
+
+        .wrapcontainer img {
+            border-radius: 50%;
+            background-color: #d4d3ad;
+            padding: 30px;
+            text-align: center;
+            width: 360px;
+            height: 360px;
+            position: absolute;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+            overflow: hidden;
+            margin-top: 350px;
+        }
+
+        .wrapcontainer h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 560px;
+            height: 300px;
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: #d4d3ad;
+            margin-bottom: 50px;
+            margin-top: 200px;
+            margin-left: 210px;
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #080808;
+            font-family: 'Itim', cursive;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-overlay {
+            position: absolute;
+            top: -35px;
+            left: 25%;
+            transform: translateX(-60%);
+        }
+
+        .service-overlay {
+            position: static;
+            text-align: center;
+        }
+
+        footer {
+            background-color: beige;
+            color: black;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .footer-overlay {
+            text-align: center;
+            flex: 1;
+        }
+
+        .footer-overlay img {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-top: -70px;  
+        }
+
+        .contact-info {
+            position: absolute;
+            right: 20px;
+            top: 20%;
+            transform: translateY(-50%);
+            text-align: right;
+            color: black;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #000000;
+            margin-top: -30px;
+            font-size: 15px;
+        }
+        .products {
+                        /* margin-top: -50px; Added margin-top to separate it from the previous content */
+                        padding: 20px; /* Adjusted padding for aesthetics */
+                        text-align: center;
+                        background-color: white;
+                        
+                        
+                    }
+                
+                    .products h2 {
+                        color: black;
+                        font-size: 50px;
+                        margin-bottom: 20px; /* Added margin-bottom for spacing */
+                    }
+                
+                    .product-grid {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        flex-wrap: wrap; /* Allow products to wrap to the next line if necessary */
+                    }
+                
+                    .product {
+                        background-color: white;
+                        border-radius: 10px;
+                        padding: 20px;
+                        width: 200px;
+                        text-align: center;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+                
+                    .product img {
+                        width: 100px;
+                        height: auto;
+                    }
+                
+                    .product h3 {
+                        color: black;
+                        font-size: 18px;
+                        margin: 10px 0;
+                    }
+                
+                    .product p {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                
+                    .product button {
+                        background-color: #6a3eff;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                
+                    .product button:hover {
+                        background-color: #4b29db;
+                    }
+
+    
+
+    </style>
+</head>
+<body>
+    {% load static %}
+    <header>
+        <div class="header-container">
+            <h2>Tails and Whiskers</h2>
+        </div>
+        <div class="links">
+            <h4><a href="{% url 'home' %}">Home</a></h4>   
+            <h4><a href="{% url 'product_list' %}">Products</a></h4>
+            <h4><a href="{% url 'service' %}">Service</a></h4>
+            <h4><a href="{% url 'aboutus' %}">About Us</a></h4> 
+            <h4><a href="{% url 'login' %}">Login</a></h4>
+        </div>
+    </header>
+
+    <div class="wrapcontainer">
+        <h2>Welcome Furry Friends!</h2>
+        <img src="{% static 'images/homeanimation.gif' %}">
+    </div>
+
+    <section class="products">
+        <br>
+        <h2>Products</h2>
+        <div class="product-grid">
+            {% for product in products %}
+                <div class="product">                           
+                    <img src="{% static 'images/' %}{{ product.image }}" alt="{{ product.name }}">
+
+                    <h3>{{ product.name }}</h3>
+                    <p>₱{{ product.price }}</p>
+                    <button>Check Product Details</button>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    
+   
+
+   
+
+    <footer>
+        <div class="footer-overlay">
+            <img src="{% static 'images/logo.png' %}" alt="Tails & Whiskers">
+            <p class="copyright">@ All Rights Reserved</p>
+        </div>
+        <div class="contact-info">
+            <p>Phone: +63 999 999 9999</p>
+            <p>Address: Cebu, PH</p>
+        </div>
+    </footer>
+</body>
+</html>
