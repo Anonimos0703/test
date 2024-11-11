@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'admin_page', 'media')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'admin_page',
+    'appointment',
+    
 ]
 
 MIDDLEWARE = [
@@ -70,6 +75,8 @@ TEMPLATES = [
 
 AUTH_USER_MODEL = 'users.CustomUser'
 WSGI_APPLICATION = 'account.wsgi.application'
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True  
+# SESSION_COOKIE_AGE = 86400  
 
 
 # Database
