@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +49,8 @@
         .logo-container {
             display: center;
             position: relative;
-            width: 150px; /* Set initial logo width */
+            width: 150px;
+            /* Set initial logo width */
             margin-bottom: -87px;
             margin-left: -120px;
         }
@@ -56,8 +58,10 @@
         .logo-container img {
             width: 180%;
             height: 230px;
-            border-radius: 10px; /* Optional: adds rounded corners */
-            opacity: 0.9; /* Optional: adjust transparency for overlay effect */
+            border-radius: 10px;
+            /* Optional: adds rounded corners */
+            opacity: 0.9;
+            /* Optional: adjust transparency for overlay effect */
             margin-top: 20px;
         }
 
@@ -74,7 +78,7 @@
             /* margin-top: 10px; */
             text-align: center;
             margin: 0 0;
-            
+
         }
 
         /* Right side form */
@@ -95,11 +99,11 @@
             /* background-size: cover;
             background-position: center;
             background-repeat: no-repeat; */
-             /* margin-right: -47%;  */
-                /* position: absolute;
+            /* margin-right: -47%;  */
+            /* position: absolute;
                 right: 0; */
 
-                
+
             /* background-color: #FFFDB5;
             padding: 50px;
             border-radius: 8px;
@@ -115,13 +119,13 @@
             transform: translate(-50%, -50%);
             background: rgba(242, 236, 159, 0.5);
             box-sizing: border-box;
-            box-shadow: 0 15px 25px rgba(0,0,0,.6);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
             border-radius: 10px;
-            background-image: url("{% static 'images/signup.jpg' %}"); 
+            background-image: url("{% static 'images/signup.jpg' %}");
             background-size: cover;
             background-position: center;
-            
- 
+
+
         }
 
         h2 {
@@ -162,9 +166,10 @@
             text-align: center;
             font-size: 16px;
             width: 70%;
-            display: block; /* Ensures it acts as a block-level element */
-    margin: 15px auto;
-    margin-right: 40px;
+            display: block;
+            /* Ensures it acts as a block-level element */
+            margin: 15px auto;
+            margin-right: 40px;
         }
 
         button:hover {
@@ -186,7 +191,8 @@
                 flex-direction: column;
             }
 
-            .left-section, .right-section {
+            .left-section,
+            .right-section {
                 width: 100%;
             }
 
@@ -195,93 +201,102 @@
             }
 
             .logo-container {
-                width: 100px; /* Adjust logo size for smaller screens */
+                width: 100px;
+                /* Adjust logo size for smaller screens */
             }
         }
+
         .animation {
-    display: flex;            /* Enable flexbox layout */
-    justify-content: center;  /* Center the images horizontally (optional) */
-    align-items: center;      /* Align items vertically (optional) */
-    flex-wrap: wrap;          /* Allows wrapping if the screen is small */
-    margin-top: -45px;
-}
+            display: flex;
+            /* Enable flexbox layout */
+            justify-content: center;
+            /* Center the images horizontally (optional) */
+            align-items: center;
+            /* Align items vertically (optional) */
+            flex-wrap: wrap;
+            /* Allows wrapping if the screen is small */
+            margin-top: -45px;
+        }
 
-.animation img {
-    width: 150px;  /* Adjust width as needed */
-    height: auto;  /* Keeps the aspect ratio */
-    margin-right: 10px; /* Space between images */
-}
+        .animation img {
+            width: 150px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Keeps the aspect ratio */
+            margin-right: 10px;
+            /* Space between images */
+        }
 
-.animation img:last-child {
-    margin-right: 0; /* Remove margin for the last image */
-}
-.form-container h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
+        .animation img:last-child {
+            margin-right: 0;
+            /* Remove margin for the last image */
+        }
 
-.form-container label {
-    font-weight: bold;
-    color: #555;
-}
+        .form-container h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-.form-container div {
-    margin-bottom: 15px;
-}
+        .form-container label {
+            font-weight: bold;
+            color: #555;
+        }
 
-.form-container input[type="text"],
-.form-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
+        .form-container div {
+            margin-bottom: 15px;
+        }
 
-.form-container button[type="submit"] {
-    
-    width: 62%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    margin-left: 38px;
-}
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
 
-.form-container button[type="submit"]:hover {
-    background-color: #45a049;
-}
+        .form-container button[type="submit"] {
 
-.form-container a {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 20px;
-    color: #06f80e;
-    text-decoration: none;
-}
+            width: 62%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-left: 38px;
+        }
 
-.form-container a:hover {
-    text-decoration: underline;
-}
+        .form-container button[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
+        .form-container a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #06f80e;
+            text-decoration: none;
+        }
 
-a.homelink{
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-}
+        .form-container a:hover {
+            text-decoration: underline;
+        }
 
 
-        
+        a.homelink {
+            font-size: 18px;
+            text-decoration: none;
+            color: #333;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Left Section -->
@@ -293,11 +308,11 @@ a.homelink{
                 <h1>Tails and Whiskers</h1>
                 <h2>Where Your Pet's Happiness, Is Our Priority!</h2>
                 <div class="animation">
-                    <img src="{% static 'images/animation.gif' %}" >
-                    <img src="{% static 'images/animation.gif' %}" >
-                    <img src="{% static 'images/animation.gif' %}" >
-                    
-                   </div>
+                    <img src="{% static 'images/animation.gif' %}">
+                    <img src="{% static 'images/animation.gif' %}">
+                    <img src="{% static 'images/animation.gif' %}">
+
+                </div>
             </div>
         </div>
 
@@ -307,7 +322,7 @@ a.homelink{
                 <a class="homelink" href="{% url 'home' %}"> ← </a>
                 <h2>Login Account</h2>
 
-                 
+
 
                 <form method="post">
                     {% csrf_token %}
@@ -322,14 +337,14 @@ a.homelink{
                     </div>
 
                     <!-- Messages Section -->
-                    
+
 
                     {% if messages %}
-                        <div class="alert-container">
-                            {% for message in messages %}
-                                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-                            {% endfor %}
-                        </div>
+                    <div class="alert-container">
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
                     {% endif %}
 
                     <button type="submit">Login</button>
@@ -339,4 +354,5 @@ a.homelink{
         </div>
     </div>
 </body>
+
 </html>

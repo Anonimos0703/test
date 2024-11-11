@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f4e3; 
+            color: #333; 
+        }
+        h1 {
+            text-align: center;
+            color: #5a4d41; 
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff; 
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #5a4d41; 
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5a4d41; 
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button[type="submit"]:hover {
+            background-color: #8c7a66; 
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #5a4d41; 
+        }
+        a:hover {
+            color: #8c7a66; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Create New Product</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}  
+        <button type="submit">Save Product</button>
+    </form>
+
+    <a href="{% url 'inventory_list' %}">Back to Product List</a>
+
+</body>
+</html>
